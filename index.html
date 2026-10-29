@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Asteroid Hunter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="game-container">
+  <button id="muteBtn" class="btn-mute">🔊 Audio: ON</button>
+  <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+  <!-- Tombol Tembak Layar HP -->
+  <button id="shootBtn" class="shoot-btn">🚀 TEMBAK</button>
+
+  <!-- Start Screen -->
+  <div id="startScreen" class="overlay">
+    <h1>ASTEROID HUNTER</h1>
+    <p>
+      <b>Pencet/Sentuh Layar</b> atau <b>WASD / Panah</b> untuk mengemudikan Pesawat Luar Angkasa.<br>
+      Tekan <b>Spasi / Tombol Tembak</b> untuk menembak amunisi!<br><br>
+      ⚠️ <b>Misi Luar Angkasa:</b><br>
+      • Hancurkan <b>Asteroid</b> & <b>Alien</b> untuk mendapatkan <b>+2.5 Detik Waktu</b>!<br>
+      • Ambil <b>Gelembung Amunisi</b> melayang untuk mengisi ulang energi peluru (+15 Ammo).<br>
+      • Waspada terhadap <b>Induk Bos Alien</b> yang sangat tebal!
+    </p>
+    <button id="startBtn" class="btn">LUNCURKAN</button>
+  </div>
+
+  <!-- Game Over Screen -->
+  <div id="gameOverScreen" class="overlay hidden">
+    <h1 style="color: #ef4444;">MISSION FAILED</h1>
+    <p id="deathReason">Pesawat luar angkasa hancur!</p>
+    <p>Skor Akhir: <span id="finalScore" style="font-weight:bold; color:#facc15;">0</span> | High Score: <span id="highScoreText" style="font-weight:bold; color:#facc15;">0</span></p>
+    <button id="restartBtn" class="btn">COBA LAGI</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
